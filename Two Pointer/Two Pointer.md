@@ -4,8 +4,8 @@
 - Place one pointer at the **start** (`left`) and one at the **end** (`right`) of a **sorted array**.
 - At each step, examine the pair `(nums[left], nums[right])`.
 - Depending on the condition (e.g., their sum vs. target), move one pointer:
-  - If the value is **too small**, move `left` forward (to increase the sum).
-  - If the value is **too large**, move `right` backward (to decrease the sum).
+  - If the condition is **too small**, move `left` forward (to increase the sum).
+  - If the condition is **too large**, move `right` backward (to decrease the sum).
   - If it matches, you’ve found the answer.
 
 The **sorted order** guarantees that moving the pointers systematically eliminates impossible pairs.
@@ -15,8 +15,8 @@ The **sorted order** guarantees that moving the pointers systematically eliminat
 ## Why It Works
 - A naive solution would check every pair `(i, j)` → **O(n²)** time.
 - Two pointers skip large groups of pairs at once:
-  - If `nums[left] + nums[right] > target`, then all pairs with that `right` and larger `left` are **even bigger** → safely skipped.
-  - If `nums[left] + nums[right] < target`, then all pairs with that `left` and smaller `right` are **even smaller** → safely skipped.
+  - If `nums[left] + nums[right] > condition`, then all pairs with that `right` and larger `left` are **even bigger** → safely skipped.
+  - If `nums[left] + nums[right] < condition`, then all pairs with that `left` and smaller `right` are **even smaller** → safely skipped.
 - Each pointer only moves forward or backward, never revisiting the same element → linear scan.
 
 ---
