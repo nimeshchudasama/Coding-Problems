@@ -1,0 +1,41 @@
+.menu-card {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--beige);
+  border: 2px solid var(--safford-red);
+  border-radius: 8px;
+  font-family: sans-serif;
+}
+
+.menu-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: var(--safford-red);
+  color: var(--beige);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.menu-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--safford-red);
+}
+
+.menu-card li:last-child {
+  border-bottom: none;
+}
+
+.menu-card .price {
+  color: var(--safford-red);
+  font-weight: 500;
+}
